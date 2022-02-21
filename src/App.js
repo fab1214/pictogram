@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Nav from "./Nav";
 import Post from "./Post";
-import "./App.css";
-import logo from "./assets/images/camera_logo.png";
 import { db } from './firebase';
 function App() {
   const [posts, setPosts] = useState([]);
@@ -17,16 +16,13 @@ function App() {
         post: doc.data()
       })));
     })
+    //blank conditions (empty array in the below example) means run useEffect when page loads
   }, [])
 
   return (
     <div className="app">
-      {/* HEADER */}
-      <div className="app__header">
-        <img className="app__headerImage" src={logo} alt="pictogram logo" />
-        <h3>pictogram</h3>
-      </div>
-
+      {/* NAV */}
+      <Nav />
       <h1>Building pictogram, an instagram clone!</h1>
       {/* POSTS */}
       {

@@ -11,7 +11,7 @@ function Post({ username, caption, imageUrl }) {
         <Avatar
           className="post__avatar"
           alt={username}
-          src=""
+          src="add in src later"
           sx={{ width: 50, height: 50 }}
         />
         <h3>{username}</h3>

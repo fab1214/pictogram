@@ -1,0 +1,17 @@
+.nav__header{
+    display: flex;
+    /* object-fit: contain; */
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .nav__headerImage{
+    width: 25px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .nav__header h3 {
+    margin-left: 10px;
+  }

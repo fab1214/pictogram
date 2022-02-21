@@ -5,20 +5,3 @@
 .app {
   background: #F9F9F9;
 }
-
-.app__header{
-  display: flex;
-  object-fit: contain;
-  padding: 20px;
-  background-color: white;
-  border-bottom: 1px solid lightgray;
-}
-
-.app__headerImage{
-  width: 25px;
-  height: auto;
-}
-
-.app__header h3 {
-  margin-left: 1%;
-}
