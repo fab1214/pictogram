@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import Post from "./Post";
-import Signup from "./Signup";
 import { db } from './firebase';
+import './App.css';
+
 function App() {
   const [posts, setPosts] = useState([]);
 
@@ -22,7 +23,6 @@ function App() {
 
   return (
     <div className="app">
-      <Signup />
       {/* NAV */}
       <Nav />
       <h1>Building pictogram, an instagram clone!</h1>

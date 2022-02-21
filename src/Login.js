@@ -8,10 +8,8 @@ import './Nav.css';
 import { Grid, TextField } from "@mui/material";
 import {auth} from './firebase';
 
-function Signup() {
+function Login() {
   const [open, setOpen] = React.useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -52,43 +50,40 @@ function Signup() {
 
   const headerStyle={margin: 0};
 
-  const handleSignUp = event => {
+  const handleSignIn = event => {
     event.preventDefault();
     //create user and capture email & password
     auth
-    .createUserWithEmailAndPassword(email, password)
+    .signInWithEmailAndPassword(email, password)
     .then((authUser) => {
       return authUser.user.updateProfile({
         displayName: username
       })
     })
     .catch((error) => alert(error.message));
-
+    
     handleClose();
   }
 
   return (
     <div>
       {user ? (
-        <Button onClick={() => auth.signOut()}>Logout</Button>
+          <div></div>
       ): (
-        <Button onClick={handleOpen}>Sign Up</Button>
+        <Button onClick={handleOpen}>Sign In</Button>
       )}
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             <Grid align='center' >
               <img className="nav__headerImage" style={{width:'45px'}} src={logo} alt="pictogram logo" />
-              <h2 style={headerStyle}>Sign Up</h2>
-              <Typography variant="caption">Please fill out the form below to create a pictogram account!</Typography>
+              <h2 style={headerStyle}>Sign In</h2>
+              <Typography variant="caption">Enter your credentials below to sign in!</Typography>
             </Grid>
           <form>
-            <TextField type='text' value={firstName} onChange={(e) => setFirstName(e.target.value)} required fullWidth label="First Name" variant="standard" placeholder='Enter your first name' />
-            <TextField type='text' value={lastName} onChange={(e) => setLastName(e.target.value)} required fullWidth label="Last Name" variant="standard" placeholder='Enter your last name'/>
             <TextField type='text' value={email} onChange={(e) => setEmail(e.target.value)} required fullWidth label='Email' variant='standard' placeholder='Enter your email' />
-            <TextField type='text' value={username} onChange={(e) => setUsername(e.target.value)} required fullWidth label="Username" variant="standard" placeholder='Enter a username'/>
             <TextField type='password' value={password} onChange={(e) => setPassword(e.target.value)} required fullWidth label="Password" variant="standard" placeholder='Password must be a minimum of 8 characters'/>
-            <Button onClick={handleSignUp} style={{marginTop: '15px'}} type="submit" variant="contained" color="primary">Sign Up</Button>
+            <Button onClick={handleSignIn} style={{marginTop: '15px'}} type="submit" variant="contained" color="primary">Sign In</Button>
           </form>
           </Typography>
         </Box>
@@ -97,4 +92,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;

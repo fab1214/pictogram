@@ -15,3 +15,8 @@
   .nav__header h3 {
     margin-left: 10px;
   }
+
+  .user__buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
