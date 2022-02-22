@@ -55,13 +55,10 @@ function Login() {
     //create user and capture email & password
     auth
     .signInWithEmailAndPassword(email, password)
-    .then((authUser) => {
-      return authUser.user.updateProfile({
-        displayName: username
-      })
-    })
     .catch((error) => alert(error.message));
     
+    setUsername('');
+    setPassword('');
     handleClose();
   }
 

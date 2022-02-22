@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import Post from "./Post";
+import ImageUpload from "./ImageUpload";
 import { db } from './firebase';
 import './App.css';
 
@@ -36,6 +37,12 @@ function App() {
         imageUrl={post.imageUrl}
         />
       ))}
+
+      {/* I want to have... */}
+      {/* caption input */}
+      {/* file picker */}
+      {/* post button */}
+      <ImageUpload />
     </div>
   );
 }
