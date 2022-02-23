@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button } from "@mui/material/";
 import firebase from 'firebase';
 import { storage, db } from "./firebase";
+import './ImageUpload.css';
 
 function ImageUpload({username}) {
   //set useState for image upload fields
@@ -40,7 +41,7 @@ function ImageUpload({username}) {
         .getDownloadURL()
         .then((url) => {
             // post image inside firebase db
-            db.collections("posts").add({
+            db.collection("posts").add({
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 caption: caption,
                 imageUrl: url,
@@ -55,13 +56,13 @@ function ImageUpload({username}) {
   };
   
   return (
-    <div>
+    <div className="post__uploader">
       {/* I want to have... */}
       {/* caption input */}
       {/* file picker */}
       {/* progress bar */}
       {/* post button */}
-      <progress value={progress} max='100'/>
+      <progress className="progress__bar" value={progress} max='100'/>
       <TextField
         type="text"
         placeholder="Enter a caption"

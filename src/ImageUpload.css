@@ -1,0 +1,12 @@
+.post__uploader{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.progress__bar{
+    width: 100%;
+}

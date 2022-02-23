@@ -5,3 +5,9 @@
 .app {
   background: #F9F9F9;
 }
+
+.app__header{
+  background: white;
+  display: flex;
+  justify-content: space-evenly;
+}
