@@ -1,6 +1,7 @@
 .post {
     background: white;
-    max-width: 500px;
+    width: 800px;
+    /* max-width: 500px; */
     border: 1px solid lightgray;
     margin-bottom: 50px;
 }
@@ -25,4 +26,19 @@
 
 .post__avatar {
     margin-right: 1%;
+}
+
+.post__comments {
+    padding: 10px;
+}
+
+form.comment__form {
+    display: flex;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 15px;
+}
+
+.comment__button {
+    padding-left: 5%;
 }

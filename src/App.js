@@ -12,6 +12,8 @@ import logo from "./assets/images/camera_logo.png";
 import './Nav.css';
 import { Grid, TextField } from "@mui/material";
 import {auth} from './firebase';
+import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -137,6 +139,7 @@ function App() {
 
 
   return (
+    <Router>
     <div className="app">
       <div className='nav'>
       <Nav user={user} />
@@ -215,6 +218,7 @@ function App() {
       )}
 
     </div>
+    </Router>
   );
 }
 

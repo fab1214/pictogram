@@ -67,9 +67,11 @@ function Post({ postId, user, username, caption, imageUrl }) {
     ))}
     </div>
     {user ? (
-    <form>
-      <TextField type="text" value={comment} onChange={(e) => setComment(e.target.value)} variant='standard' placeholder="Add a comment..." />
-      <Button onClick={submitComment} type="submit" disabled={!comment} variant="contained" color="primary">Post</Button>
+    <form className="comment__form">
+      <TextField type="text" value={comment} onChange={(e) => setComment(e.target.value)} variant='standard' fullWidth placeholder="Add a comment..." />
+      <div className="comment__button">
+        <Button onClick={submitComment} type="submit" disabled={!comment} variant="contained" color="primary">Post</Button>
+      </div>
     </form>
     ): (
     <div></div>
