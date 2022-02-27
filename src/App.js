@@ -13,7 +13,6 @@ import './Nav.css';
 import { Grid, TextField } from "@mui/material";
 import {auth} from './firebase';
 
-
 function App() {
   const [posts, setPosts] = useState([]);
 
@@ -139,10 +138,10 @@ function App() {
 
   return (
     <div className="app">
-      {/* NAV */}
-      <Nav />
+      <div className='nav'>
+      <Nav user={user} />
       {/* MODALS */}
-
+      <div className="user__buttons">
       {user ? (
         <Button onClick={() => auth.signOut()}>Logout</Button>
       ): (
@@ -189,20 +188,22 @@ function App() {
           </Typography>
         </Box>
       </Modal>
-
-      <h1>Building pictogram, an instagram clone!</h1>
-
+      </div>
+    </div>
+    <div className="app__posts">
       {/* POSTS */}
       {
         posts.map(({id, post}) => (
         <Post
         key={id}
+        postId={id}
         username={post.username}
         caption={post.caption}
         imageUrl={post.imageUrl}
+        user={user}
         />
       ))}
-
+    </div>
       {/* I want to have... */}
       {/* caption input */}
       {/* file picker */}

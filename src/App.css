@@ -6,8 +6,20 @@
   background: #F9F9F9;
 }
 
-.app__header{
-  background: white;
+.nav{
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid lightgray;
+  padding: 20px 0;
+}
+
+.user__buttons {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.app__posts {
+  padding: 20px;
 }
