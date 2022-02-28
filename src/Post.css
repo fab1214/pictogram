@@ -1,6 +1,6 @@
 .post {
     background: white;
-    width: 800px;
+    width: 600px;
     /* max-width: 500px; */
     border: 1px solid lightgray;
     margin-bottom: 50px;
@@ -42,3 +42,27 @@ form.comment__form {
 .comment__button {
     padding-left: 5%;
 }
+
+@media screen and (max-width: 767px) {
+
+    .post {
+        width: 300px;
+      }
+    
+      .post__header > h3 {
+        font-size: 15px;
+      }
+    
+      .post__text {
+        font-size: 15px;
+      }
+    
+      .post__comments {
+        font-size: 15px;
+      }
+      
+      .css-zgt3rr-MuiAvatar-root {
+        width: 30px !important;
+        height: 30px !important;
+      }
+};
