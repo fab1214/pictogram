@@ -1,10 +1,10 @@
 .post__uploader{
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 9px;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 45% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 9px !important;
 }
 
 .progress__bar{
