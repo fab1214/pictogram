@@ -56,7 +56,7 @@ function ImageUpload({username}) {
   };
   
   return (
-    <div className="post__uploader">
+    <div className="upload_tool">
       {/* I want to have... */}
       {/* caption input */}
       {/* file picker */}
