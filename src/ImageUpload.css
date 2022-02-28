@@ -1,0 +1,18 @@
+.post__uploader{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.progress__bar{
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .post__uploader {
+        width: fit-content;
+    }
+}
