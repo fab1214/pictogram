@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button } from "@mui/material/";
 import firebase from 'firebase';
 import { storage, db } from "./firebase";
-import './ImageUpload.css';
+import './ImageUploadTool.css';
 
 function ImageUpload({username}) {
   //set useState for image upload fields
@@ -56,7 +56,7 @@ function ImageUpload({username}) {
   };
   
   return (
-    <div className="post__uploader">
+    <div className="upload_tool">
       {/* I want to have... */}
       {/* caption input */}
       {/* file picker */}

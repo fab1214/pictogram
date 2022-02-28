@@ -1,4 +1,4 @@
-.post__uploader{
+.upload_tool {
     display: flex;
     flex-direction: column;
     width: 45%;
@@ -7,7 +7,7 @@
     margin-bottom: 10px;
 }
 
-.progress__bar{
+.progress__bar {
     width: 100%;
 }
 

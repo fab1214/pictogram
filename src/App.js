@@ -197,8 +197,8 @@ function App() {
     <div className="app__posts">
       {/* POSTS */}
       {
-        posts.length == 0 ? (
-          <h1>There are no posts on the feed :( </h1>
+        posts.length === 0 ? (
+          <h1>There are no posts on the feed :(</h1>
         ) : (
         posts.map(({id, post}) => (
         <Post
