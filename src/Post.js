@@ -52,7 +52,7 @@ function Post({ postId, user, username, caption, imageUrl }) {
           src="add in src later"
           sx={{ width: 50, height: 50 }}
         />
-        <h3>{username}</h3>
+        <h3>{user.displayName}</h3>
       </div>
       {/* image */}
       <img className="post__image" src={imageUrl} alt=""/>
