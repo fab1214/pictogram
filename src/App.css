@@ -24,22 +24,77 @@
 }
 
 .app__posts {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
   margin-top: 6%;
 }
 
+.app__posts h1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2%;
+}
+
+.upload_tool {
+  display: flex!important;
+  flex-direction: column!important;
+  margin: 5% auto 10px!important;
+  width: 45%!important;
+}
+
+.progress__bar {
+  width: 100% !important;
+}
+
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 800px){
+  .app__posts {
+    margin-top: 7%;
+  }
+  .app__posts h1 {
+    padding-top: 3%;
+  }
+}
 @media screen and (max-width: 767px) {
   .app__posts {
     margin-top: 20%;
   }
-}
-
-@media screen and (max-width: 1023px) {
-  .app__posts {
-    margin-top: 9.1%;
+  .upload_tool {
+    width: fit-content !important;
   }
-};
+}
+@media screen and (max-width: 700px){
+  .app__posts {
+    margin-top: 8%;
+  }
+  .app__posts h1 {
+    padding-top: 4%;
+  }
+}
+@media screen and (max-width: 615px){
+  .app__posts {
+    margin-top: 11%;
+  }
+  .app__posts h1 {
+    padding-top: 7%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 510px){
+  .app__posts {
+    margin-top: 15%;
+  }
+  .app__posts h1 {
+    padding-top: 11%;
+  }
+}
+@media screen and (max-width: 430px){
+  .app__posts {
+    margin-top: 17%;
+  }
+  .app__posts h1 {
+    padding-top: 13%;
+  }
+}

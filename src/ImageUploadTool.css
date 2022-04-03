@@ -1,10 +1,8 @@
 .upload_tool {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 45% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-bottom: 10px !important;
+    display: flex!important;
+    flex-direction: column!important;
+    margin: 5% auto 10px!important;
+    width: 45%!important;
 }
 
 .progress__bar {
@@ -12,7 +10,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .post__uploader {
+    .upload_tool {
         width: fit-content !important;
     }
 }
