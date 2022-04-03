@@ -57,11 +57,6 @@ function ImageUpload({username}) {
   
   return (
     <div className="upload_tool">
-      {/* I want to have... */}
-      {/* caption input */}
-      {/* file picker */}
-      {/* progress bar */}
-      {/* post button */}
       <progress className="progress__bar" value={progress} max='100'/>
       <TextField
         type="text"

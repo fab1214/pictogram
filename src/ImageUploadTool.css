@@ -1,18 +1,18 @@
 .upload_tool {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 45% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 10px !important;
 }
 
 .progress__bar {
-    width: 100%;
+    width: 100% !important;
 }
 
 @media screen and (max-width: 767px) {
     .post__uploader {
-        width: fit-content;
+        width: fit-content !important;
     }
 }
